@@ -15,6 +15,9 @@ let largeButton;
 let h3Student;
 //Reference to parent node of the large button
 let largeButtonParentNode;
+//Reference to the firstParagraph id
+let firstParagraphEdit;
+
 
 (function(app){
 
@@ -40,6 +43,14 @@ let largeButtonParentNode;
         largeButtonParentNode = largeButton.parentNode;
         //Insert the h3 element before the large button
         largeButtonParentNode.insertBefore(h3Student, largeButton);
+
+        //Change text of the firstparagraph
+        firstParagraphEdit = document.getElementById("firstParagraph");
+        //Change the text
+        firstParagraphEdit.textContent = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods.";
+
+        //
+        firstParagraphEdit.style.cssText = "display: none";
 
         Main();
     }
